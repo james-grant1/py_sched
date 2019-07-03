@@ -1,0 +1,9 @@
+# Compiled python modules.
+*.pyc
+.cache/
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg 'meggadata', regenerated from source files by setuptools.
+/*.egg-info
