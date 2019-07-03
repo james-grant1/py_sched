@@ -1,0 +1,24 @@
+'info':
+  'scheduler': 'Slurm'
+  'version': '19.05'
+'format'
+#  'shebang': '#!/bin/bash', should be system dependent rather than scheduler?
+  'hash': '#SBATCH'
+'map':
+  '$SEPARATOR': '='
+  'general':
+    'name': '--job-name'
+  'accouting':
+    'queue': '-partition'
+    'project': '--account'
+    'email': '--mail-user'
+  'resource':
+    'nodes': '--nodes'
+    'ppn': '--ntasks-per-node'
+    'tasks': 
+    'threads':
+    'walltime': '--time'
+    'memory': '--mem'
+  'io':
+    'stdout': '--output'
+    'stderr': '--error'

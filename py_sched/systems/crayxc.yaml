@@ -1,0 +1,4 @@
+'launch': 'aprun'
+'tasks': '-n'
+'ppn': '-N'
+'threads': '-d'

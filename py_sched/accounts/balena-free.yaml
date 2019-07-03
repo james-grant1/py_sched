@@ -1,0 +1,6 @@
+'accouting':
+  'queue': 'batch-all'
+  'email': 'rjg20@bath.ac.uk'
+  'project': 'free'
+'system': 'mpirun'
+
