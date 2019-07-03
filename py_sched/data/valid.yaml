@@ -1,0 +1,12 @@
+'name': 'test'
+'queue': 'default'
+'project': 'my_project'
+'email': 'rjg20@bath.ac.uk'
+'nodes': 4
+'ppn': 16
+'tasks': 64
+'threads': 1
+'walltime': '12:0:0'
+'memory': '20gb'
+'stdout': 'StdOut.o.%j'
+'stderr': 'StdEdd.e.%j'

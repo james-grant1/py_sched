@@ -1,0 +1,26 @@
+'title'='My simple single example'
+'general':
+  'name': 'test'
+'accouting':
+  'queue': 'default'
+  'project': 'my_project'
+  'email': 'rjg20@bath.ac.uk'
+'resource':
+  'nodes': 4
+  'ppn': 16
+  'tasks': 64
+  'threads': 1
+  'walltime': '12:0:0'
+  'memory': '20gb'
+'io':
+  'stdout': 'StdOut.o.%j'
+  'stderr': 'StdEdd.e.%j'
+'system': 'crayxc'
+'account': 'isambard-arm'
+'map': 'pbspro-18.2'
+'mod': 'isambard-gnu-vasp'
+'pre': 'pre-script.sh'
+'post': 'post-script.sh'
+'exec': 'vast_std 2>&1 > vasp.log'
+'verbose': True
+'chg_workdir': True
