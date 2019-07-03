@@ -1,4 +1,4 @@
-from py_sched import utils
+import py_sched.utils as utils
 import unittest
 import pytest
 import ruamel.yaml

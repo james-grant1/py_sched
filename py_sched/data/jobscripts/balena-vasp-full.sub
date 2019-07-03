@@ -1,5 +1,6 @@
-#!/bin/bash --login
-# Jobscript created with py_sched
+#!/bin/bash
+# Created with py_sched using template:
+# VASP example on Balena
 
 # General job parameters
 #SBATCH --job-name=VASP

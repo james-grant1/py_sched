@@ -1,19 +1,19 @@
 'info':
   'scheduler': 'PBSPRO'
   'version': '18.2'
-'format'
+'format':
 #  'shebang': '#!/bin/bash', should be system dependent rather than scheduler?
   'hash': '#PBS'
 'map':
+  '$SEPARATOR': '='
   'general':
     'name': '-N'
-  'accouting':
+  'accounting':
     'queue': '-q'
     'project': '-P'
     'email': '-M'
   'resource':
     '$SUFFIX': '-l'
-    '$SEPARATOR': '='
     'nodes': 'select'
     'ppn': 'ncpus'
     'tasks': 
@@ -23,6 +23,3 @@
   'io':
     'stdout':
     'stderr':
-
-
-    

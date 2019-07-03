@@ -1,0 +1,29 @@
+'title'='Py_sched Isambard Example'
+'general':
+  'name': 'test'
+'accounting':
+  'queue': 'arm'
+  'project': ''
+  'email': 'rjg20@bath.ac.uk'
+'resource':
+  'nodes': 1
+  'ppn': 64
+  'tasks': 64
+  'threads': 1
+  'walltime': '6:0:0'
+  'memory': '20gb'
+'options':
+  'verbose': True
+  'chg_workdir': True
+'system': 
+  'file': 'crayxc.yaml'
+'account': 
+  'file': 'isambard-arm.yaml'
+'map': 
+  'file': 'pbspro-18.2.yaml'
+'mod': 
+  'file': 'isambard-gnu-vasp.sh'
+'pre': 
+  'file': 'pre-script.sh'
+'post': 
+  'file': 'post-script.sh'

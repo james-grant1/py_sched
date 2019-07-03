@@ -17,3 +17,15 @@ def read_yaml(filename):
         raise FileNotFoundError
     except:
         raise Exception
+
+def read_script(filename):
+    '''Read script line by line and return as list'''
+
+    try:
+        with open(filename, 'r') as fp:
+            return( fp.read().splitlines() )
+    except FileNotFoundError:
+        raise FileNotFoundError
+    except:
+        raise Exception
+

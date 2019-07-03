@@ -1,0 +1,30 @@
+'title': 'VASP example on Balena'
+'general':
+  'name': 'VASP'
+'accouting':
+  'queue': 'free'
+  'project': 'batch-sky'
+  'email': 'rjg20@bath.ac.uk'
+'resource':
+  'nodes': 2
+  'ppn': 24
+  'tasks': 48
+  'threads': 1
+  'walltime': '6:0:0'
+  'memory': '20gb'
+'io':
+  'stdout': 'StdOut.o.%j'
+  'stderr': 'StdEdd.e.%j'
+'system':
+  'file': 'balena.yaml'
+'account': 
+  'file': 'balena-free.yaml'
+'map':
+  'file': 'slurm-19.05.yaml'
+'mod': 
+  'file': 'balena-intel-18.5.sh'
+'job':
+  - 'exec': 'vasp_std'
+    'args': '2>&1 > vasp.log'
+'options':
+  'verbose': True
