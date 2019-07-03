@@ -15,12 +15,18 @@
 'io':
   'stdout': 'StdOut.o.%j'
   'stderr': 'StdEdd.e.%j'
-'system': 'crayxc'
-'account': 'isambard-arm'
-'map': 'pbspro-18.2'
-'mod': 'isambard-gnu-vasp'
-'pre': 'pre-script.sh'
-'post': 'post-script.sh'
+'system': 
+  'file': 'crayxci.yaml'
+'account': 
+  'file': 'isambard-arm.yaml'
+'map': 
+  'file': 'pbspro-18.2.yaml'
+'mod': 
+  'file': 'isambard-gnu-vasp.yaml'
+'pre': 
+  'file': 'pre-script.sh'
+'post': 
+  'file': 'post-script.sh'
 'exec': 'vast_std 2>&1 > vasp.log'
 'verbose': True
 'chg_workdir': True
