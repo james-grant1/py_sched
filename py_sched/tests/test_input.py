@@ -128,7 +128,8 @@ class Test_Pysched_read(unittest.TestCase):
                            'resource':{
                                '$SUFFIX': '-l',
                                'nodes': 'select',
-                               'ppn': 'ncpus',
+                               'ncpus': 'ncpus',
+                               'ppn': None,
                                'tasks': None,
                                'threads': None,
                                'walltime': 'walltime',
@@ -179,10 +180,52 @@ class Test_Pysched_read(unittest.TestCase):
         expect = utils.read_script(expect_file)
 
         my_sched.write_header()
-        assert my_sched.get_job() == expect[0:3]
+        assert my_sched.get_job() == expect[0:4]
 
         my_sched.write_general()
-        assert my_sched.get_job() == expect[0:6]
+        assert my_sched.get_job() == expect[0:7]
+
+        my_sched.write_accounting()
+        assert my_sched.get_job() == expect[0:12]
+
+        my_sched.write_resource()
+        assert my_sched.get_job() == expect[0:18]
+
+        my_sched.write_io()
+        assert my_sched.get_job() == expect[0:22]
+
+        my_sched.write_modules()
+        assert my_sched.get_job() == expect[0:29]
+
+        my_sched.write_threads()
+        assert my_sched.get_job() == expect[0:32]
+
+        my_sched.write_proc()
+        assert my_sched.get_job() == expect[0:35]
+
+@pytest.mark.parametrize('nodes,ppn,threads,tasks',[
+        (1,24,1,24),
+        (2,24,1,48),
+        (3,12,2,36)])
+def test_set_tasks(nodes, ppn, threads, tasks):
+    '''Check that tasks is automatically generated correctly'''
+
+    def_file = 'data/balena_vasp.yaml'
+
+    my_sched = pys.Pysched()
+    my_sched.load_def_file(def_file)
+    my_sched.dupl_def()
+
+    my_sched.dupl['resource']['nodes'] = nodes
+    my_sched.dupl['resource']['ppn'] = ppn
+    my_sched.dupl['resource']['threads'] = threads
+
+    my_sched._set_tasks()
+
+    assert  my_sched.dupl['resource']['tasks'] == tasks
+
+
+
          
 
 

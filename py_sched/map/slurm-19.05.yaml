@@ -8,13 +8,14 @@
   '$SEPARATOR': '='
   'general':
     'name': '--job-name'
-  'accouting':
-    'queue': '-partition'
+  'accounting':
+    'queue': '--partition'
     'project': '--account'
     'email': '--mail-user'
   'resource':
     'nodes': '--nodes'
-    'ppn': '--ntasks-per-node'
+    'ncpus': '--ntasks-per-node'
+    'ppn':
     'tasks': 
     'threads':
     'walltime': '--time'

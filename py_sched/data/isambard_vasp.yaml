@@ -3,10 +3,11 @@
   'name': 'test'
 'accounting':
   'queue': 'arm'
-  'project': ''
+  'project': 
   'email': 'rjg20@bath.ac.uk'
 'resource':
   'nodes': 1
+  'ncpus': 64
   'ppn': 64
   'tasks': 64
   'threads': 1

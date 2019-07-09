@@ -5,31 +5,31 @@
 # General job parameters
 #SBATCH --job-name=VASP
 
-# Specify accounting details 
+# Specify accounting details
 #SBATCH --partition=batch-sky
-#SBATCH --account=prj-cc005
+#SBATCH --account=free
 #SBATCH --mail-user=rjg20@bath.ac.uk
 
 # Specify job resources
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=24
-#SBATCH --mem=60000
 #SBATCH --time=6:00:00
+#SBATCH --mem=60000
 
-# Specify io redicts
+# Specify io redirects
 #SBATCH --output=StdOut.o.%j
 #SBATCH --error=StdErr.e.%j
 
 # Load modules for job
-
 module purge
 module load slurm
 module load intel/compiler/64/18.5.274
-module load  intel/mkl/64/18.5.274
+module load intel/mkl/64/18.5.274
 module load intel/mpi/64/18.4.274
 
 # Set number threads
 export OMP_NUM_THREADS=1
 
-# XC requires use of aprun to launch job on compute notes
+# Execute process
 mpirun -n 48 -ppn 24 vasp_std 2>&1 > vasp_job.log
+

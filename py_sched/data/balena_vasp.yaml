@@ -1,20 +1,21 @@
 'title': 'VASP example on Balena'
 'general':
   'name': 'VASP'
-'accouting':
-  'queue': 'free'
-  'project': 'batch-sky'
+'accounting':
+  'queue': 'batch-sky'
+  'project': 'free'
   'email': 'rjg20@bath.ac.uk'
 'resource':
   'nodes': 2
+  'ncpus': 24
   'ppn': 24
   'tasks': 48
   'threads': 1
-  'walltime': '6:0:0'
-  'memory': '20gb'
+  'walltime': '6:00:00'
+  'memory': '60000'
 'io':
   'stdout': 'StdOut.o.%j'
-  'stderr': 'StdEdd.e.%j'
+  'stderr': 'StdErr.e.%j'
 'system':
   'file': 'balena.yaml'
 'account': 
@@ -23,8 +24,8 @@
   'file': 'slurm-19.05.yaml'
 'mod': 
   'file': 'balena-intel-18.5.sh'
-'job':
+'proc':
   - 'exec': 'vasp_std'
-    'args': '2>&1 > vasp.log'
+    'args': '2>&1 > vasp_job.log'
 'options':
   'verbose': True

@@ -15,7 +15,8 @@
   'resource':
     '$SUFFIX': '-l'
     'nodes': 'select'
-    'ppn': 'ncpus'
+    'ncpus': 'ncpus'
+    'ppn': 
     'tasks': 
     'threads':
     'walltime': 'walltime'

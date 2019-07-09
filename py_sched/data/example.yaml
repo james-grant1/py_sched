@@ -1,6 +1,6 @@
 'general':
   'name': 'test'
-'accouting':
+'accounting':
   'queue': 'default'
   'project': 'my_project'
   'email': 'rjg20@bath.ac.uk'
